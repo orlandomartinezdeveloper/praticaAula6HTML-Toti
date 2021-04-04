@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    background: #1A1A19;
+    display: flex;
+    justify-content: center;
+
+}
+
+/* MOBILE FIRST */
+.sub-container {
+    width: 100%;
+    background: #fff;
+}
+
+.zuriquex {
+    width: 100%;
+    height: auto;
+}
+
+header {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #210606;
+    color:#fff;
+}
+
+header h1 {
+    font-size: 2em;
+    padding-left: 20px;
+}
+
+.navlist {
+    list-style: none;
+}
+
+.hamburguer-btn {
+    padding-right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.active {
+    padding: 5px 15px;
+    background: #26C4E0;
+    border-radius: 10px;
+}
+
+.cidades-section {
+    flex-direction: column;
+    padding: 25px;
+}
+
+.cidadesMaisbaratas {
+    padding: 15px 0 15px 0;
+}
+
+.cidadesMaisbaratas h2 {
+    padding-bottom: 15px;    
+}
+
+.cidadesMaisbaratas img {
+    width: 100%;
+}
+
+.cidades-section section p {
+    padding-bottom: 25px;
+}
+
+.africa {
+    padding-top: 15px;
+}
+.img-cidadex {
+    width: 100%;
+}
+
+aside {
+    background: #4e1d0b;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    color: #E0C4A5;
+    font-weight: 100;
+}
+
+.imgAside {
+    width: 100%;
+    height: auto;
+    padding: 15px 0 15px 0;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    color: #E0C4A5;
+    font-weight: 100;
+}
+
+.subFooter {
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    background: #38190f;
+}
+
+.cidadesDepois {
+    width: 100%;
+    padding: 0 25px;
+}
+
+.referencias {
+    padding:25px;
+}
+
+.referencias ul {
+    list-style: none;
+    line-height: 30px;
+}
+
+.referencias ul a {
+    color: #E0C4A5;
+}
+
+.copyright {
+    background-color: #210606;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    color: #E0C4A5;
+}
+
+.referencias ul li a:hover {
+    color: #fdfb7a;
+}
+
+#check:checked~#navlist{
+    text-decoration: none;
+}
+
+/* DESKTOP */  
+@media only screen and (min-width:1000px) {
+    .sub-container {
+        width: 75%;
+    }
+
+    header {
+        width: 75%;
+    }
+
+    .cidades-section {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    aside {
+        flex-direction: row;
+    }
+
+    .america-latina, .africa {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px 15px 20px 15px;
+    }
+
+    .cidadesMaisbaratas {
+        width: 50%;
+        padding: 15px;
+    }
+    
+    .cidadesMaisbaratas img {
+        width: 100%;
+        height: auto;
+    }
+
+    .zurique, .paris, .hongkong, .cingapura {
+        width: 25%;
+        padding: 10px;
+    }
+    
+    .subFooter {
+        flex-direction: row;
+    }
+
+    .cidadesDepois {
+        width: 75%;
+    }
+}
