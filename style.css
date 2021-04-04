@@ -41,20 +41,44 @@ header h1 {
     padding-left: 20px;
 }
 
-.navlist {
-    list-style: none;
-}
-
 .hamburguer-btn {
     padding-right: 20px;
     font-size: 2em;
     cursor: pointer;
 }
 
-.active {
-    padding: 5px 15px;
-    background: #26C4E0;
-    border-radius: 10px;
+.navlist {
+    position: fixed;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background: #4e1d0b;
+    height: 0vh;
+    width: 100%;
+    transition: .3s ease;
+}
+
+.navlist li {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.navlist li a {
+    text-decoration: none;
+    color: #E0C4A5;
+    padding-top: 15px;
+}
+
+.navlist li a:hover {
+    text-decoration: underline;
+    color: #fdfb7a;
+}
+
+.checkbox {
+    display: none;
 }
 
 .cidades-section {
@@ -146,8 +170,12 @@ footer {
     color: #fdfb7a;
 }
 
-#check:checked~#navlist{
-    text-decoration: none;
+#check:checked~.navlist {
+    height: 100vh;
+}
+
+#check:checked~.navlist li{
+    opacity: 1;
 }
 
 /* DESKTOP */  
@@ -165,6 +193,12 @@ footer {
         width: 100%;
         display: flex;
         flex-direction: row;
+    }
+
+    .active {
+        padding: 5px 15px;
+        background: #26C4E0;
+        border-radius: 10px;
     }
 
     aside {
