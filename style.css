@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     width: 100%;
     background: #1A1A19;
@@ -19,11 +23,6 @@
     background: #fff;
 }
 
-.zuriquex {
-    width: 100%;
-    height: auto;
-}
-
 header {
     position: fixed;
     height: 100px;
@@ -34,6 +33,7 @@ header {
     align-items: center;
     background: #210606;
     color:#fff;
+    z-index: 1;
 }
 
 header h1 {
@@ -68,13 +68,29 @@ header h1 {
 
 .navlist li a {
     text-decoration: none;
-    color: #E0C4A5;
+    color: #fff;;
     padding-top: 15px;
 }
 
 .navlist li a:hover {
     text-decoration: underline;
     color: #fdfb7a;
+}
+
+.section-links:before {
+    display: block;
+    content: "";
+    margin-top: 100px;
+}
+
+.img-comeco {
+    padding-top: 100px;
+    margin-bottom: -100px;
+}
+
+.zuriquex {
+    width: 100%;
+    height: auto;
 }
 
 .checkbox {
@@ -178,6 +194,35 @@ footer {
     opacity: 1;
 }
 
+.cidades-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.pais {
+    display: none;
+}
+
+.cidades-img:hover .pais {
+    z-index: 0;
+    display: block;
+    position: absolute;
+    margin-top: 20%;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.cidades-img:hover .img-cidadex {
+    opacity: 0.5;
+    transition: .3s ease;
+    transform: scale(1.2);
+}
+
+
+
 /* DESKTOP */  
 @media only screen and (min-width:1000px) {
     .sub-container {
@@ -188,6 +233,29 @@ footer {
         width: 75%;
     }
 
+    .hamburguer-btn {
+        display: none;
+    }
+    h1 {
+        width: 85%;
+    }
+    .navlist {
+        position: relative;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        top:0;       
+    }
+
+    .navlist li {
+        opacity: 1;
+    }
+
+    .navlist li a {
+        padding:5px;
+        margin-right: 10px;
+    }
+
     .cidades-section {
         height: 100%;
         width: 100%;
@@ -196,9 +264,10 @@ footer {
     }
 
     .active {
-        padding: 5px 15px;
+        padding: 2px;
         background: #26C4E0;
         border-radius: 10px;
+        color:#fff;
     }
 
     aside {
@@ -209,7 +278,6 @@ footer {
         width: 25%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         padding: 15px 15px 20px 15px;
     }
 
@@ -234,5 +302,9 @@ footer {
 
     .cidadesDepois {
         width: 75%;
+    }
+
+    .img-comeco {
+        margin-bottom: 0;
     }
 }
